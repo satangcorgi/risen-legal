@@ -8,21 +8,21 @@
 </head>
 <body>
 <h1>Risen — Privacy Policy</h1>
-<p class="updated">Last updated: 14 September 2026</p>
+<p class="updated">Last updated: 27 September 2026</p>
 
-<p>Risen is a Christian alarm app that helps you engage with a Bible verse when completing an alarm challenge. Most of your app data stays in local storage on your iPhone. <strong>We do not sell your personal data.</strong> We use the services described below to manage subscriptions and, if you choose, help check scanned verse text.</p>
+<p>Risen is a Christian alarm app that helps you engage with a Bible verse when completing an alarm challenge. Most of your app data stays in local storage on your device. <strong>We do not sell your personal data.</strong> We use the services described below to manage subscriptions and, if you choose, help check scanned verse text.</p>
 
 <h2>No accounts</h2>
 <p>You do not need a Risen account. Risen does not ask you to send your name, email address, phone number or location to use its identification service. Device and purchase-service identifiers are described below. If you contact support, we receive the information you choose to send us.</p>
 
 <h2>Local app data</h2>
-<p>Risen stores your alarms, settings, streaks, reading history, reflections, journal entries, onboarding answers and Bible-version preference locally. Risen does not upload these records to its identification service. Your device or computer backups may include app data according to your Apple settings. Deleting Risen removes its local data from that installation; it does not delete existing backups, Apple or RevenueCat purchase records, or the service records described below.</p>
+<p>Risen stores your alarms, settings, streaks, reading history, reflections, journal entries, onboarding answers and Bible-version preference locally. Risen does not upload these records to its identification service. If you choose a profile photo, Risen saves the cropped image locally on your device. It is not sent to the verse-identification service. Your device or computer backups may include app data according to your Apple settings. Deleting Risen removes its local data from that installation; it does not delete existing backups, Apple or RevenueCat purchase records, or the service records described below.</p>
 
 <h2>Camera and selected photos</h2>
 <p>Risen reads text from camera frames or a photo you choose using Apple's on-device recognition. <strong>Risen does not upload images or save a photo archive.</strong> A picture you select remains in your Photos library unless you delete it there.</p>
 
 <h2>Optional cloud verse checking</h2>
-<p>Risen first tries to match the passage on your phone. If you allow cloud identification and local matching needs help, extracted text, the requested Bible reference and its verse text are sent over an encrypted connection to Risen's Supabase service. The service sends the scanned text and the requested passage's verse text to <strong>Cloudflare Workers AI</strong> to compare their meaning. The requested Bible reference label is not sent as a separate model field, although a reference visible in scanned text may be included. Your image, journal and onboarding profile are not sent to the model.</p>
+<p>Risen first tries to match the passage on your device. If you allow cloud identification and local matching needs help, extracted text, the requested Bible reference and its verse text are sent over an encrypted connection to Risen's Supabase service. The service sends the scanned text and the requested passage's verse text to <strong>Cloudflare Workers AI</strong> to compare their meaning. The requested Bible reference label is not sent as a separate model field, although a reference visible in scanned text may be included. Your image, journal and onboarding profile are not sent to the model.</p>
 <p>Anything readable in the frame may enter the extracted text, so keep names, private notes and other personal information out of the image. The requested passage comes from Risen's Bible text; it is not your reading history or a profile of your beliefs.</p>
 <p>Our service also receives your request IP, device identifier and RevenueCat purchase-service identifier to check access and limit use. It sends the RevenueCat identifier to RevenueCat to check subscription status. <strong>These identifiers are not included in the AI model request.</strong></p>
 <p>You can decline cloud identification and continue using on-device matching and the available typing fallback. Change this choice in <strong>Me → Verse scanning</strong>. Turning it off prevents future cloud identification requests; it cannot recall a request already sent or automatically erase service records.</p>
@@ -44,7 +44,8 @@
 <h2>Summary table</h2>
 <table>
 <tr><th>Data</th><th>Risen's use</th><th>Where processed</th></tr>
-<tr><td>Camera or selected images</td><td>Read text</td><td>On your phone; no image upload</td></tr>
+<tr><td>Camera or selected images</td><td>Read text</td><td>On your device; no image upload</td></tr>
+<tr><td>Profile photo</td><td>Display the cropped photo you choose</td><td>Local app storage; no image upload</td></tr>
 <tr><td>Scanned text and requested passage</td><td>Optional cloud comparison</td><td>Supabase / Cloudflare Workers AI, after consent</td></tr>
 <tr><td>Alarms, streaks, journal, onboarding answers</td><td>Personal app experience</td><td>Local app storage; device backups may apply</td></tr>
 <tr><td>Usage identifiers and counts</td><td>Access checks and limits</td><td>Supabase; retention described above</td></tr>
@@ -52,10 +53,10 @@
 </table>
 
 <h2>Young users and privacy choices</h2>
-<p>Cloud identification is optional and sends text outside the phone. Users who need a parent or guardian's consent should obtain it before enabling this option; otherwise they can use on-device matching. Avoid scanning personal information. A parent or guardian can contact us about privacy concerns or service-data requests.</p>
+<p>Cloud identification is optional and sends text outside the device. Users who need a parent or guardian's consent should obtain it before enabling this option; otherwise they can use on-device matching. Avoid scanning personal information. A parent or guardian can contact us about privacy concerns or service-data requests.</p>
 
 <h2>Your choices</h2>
-<p>You can change cloud identification in Me and manage camera access in iPhone Settings. Contact us for questions or requests about service data. We may need enough information to locate the relevant pseudonymous records. Some records may need to be kept for legal obligations or to prevent abuse; we will explain what applies to a request.</p>
+<p>You can change cloud identification in Me and manage camera access in device Settings. Contact us for questions or requests about service data. We may need enough information to locate the relevant pseudonymous records. Some records may need to be kept for legal obligations or to prevent abuse; we will explain what applies to a request.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the updated version will be posted at this address with a new date.</p>
