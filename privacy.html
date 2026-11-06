@@ -23,7 +23,7 @@
 <p>Risen reads text from the camera, or from a photo you pick, using Apple's on-device text recognition. When a page matches your verse, Risen keeps a small dithered picture of that page on your phone for that day's page in your Book. It isn't uploaded. Turn it off in Settings &gt; Keep a picture of your page, which also deletes the pictures already kept. A photo you pick stays in your Photos library. Share cards are saved to Photos only when you choose to save one.</p>
 
 <h2>Reading hard pages online (optional)</h2>
-<p>Risen first tries to match the page on your phone. The first time that fails outside an alarm, Risen asks whether it may get online help. If you allow it, and the phone can't match a page, Risen sends the words it read on that page (never the photo) and the text of the verse you're looking for, over an encrypted connection, to Risen's service on Supabase. The service sends those two texts to Cloudflare's AI service, which compares their meaning and says whether they match. During an alarm Risen never stops to ask; it moves on to a photo or typing.</p>
+<p>Risen first tries to match the page on your phone. The first time that fails outside an alarm, Risen asks whether it may get online help. If you allow it, and the phone can't match a page, Risen sends the words it read on that page (never the photo) and the text of the verse you're looking for, over an encrypted connection, to Risen's service on Supabase. The service sends those two texts to Anthropic's AI service (the Claude API), which compares their meaning and says whether they match. During an alarm Risen never stops to ask; it moves on to a photo or typing.</p>
 <p>Anything readable in the frame can end up in the words Risen reads, so keep names and private notes out of the picture. To limit use and check access, the service also receives your IP address, a device identifier and your RevenueCat purchase identifier. It sends the purchase identifier to RevenueCat to check Premium. None of these identifiers go to the AI model.</p>
 <p>Free devices get 3 online checks a day; Premium gets 30. The onboarding demo has its own small allowance. You can turn online help off or on in Settings &gt; Read hard pages online. Turning it off stops future requests; it can't recall one already sent. On-device matching, photos and typing always work without it.</p>
 
@@ -35,7 +35,7 @@
 <tr><td>Lifetime count from an earlier version of Risen (only devices that used it)</td><td>Kept without a set expiry. The current version doesn't use it.</td></tr>
 <tr><td>Premium check</td><td>Held in server memory for 60 seconds under a pseudonymous identifier.</td></tr>
 </table></div>
-<p>Supabase and Cloudflare also process operational metadata under their own terms, and may process it outside your country. Cloudflare states that Workers AI content isn't used to train models without consent, and Risen doesn't give that consent. See Cloudflare's <a href="https://developers.cloudflare.com/workers-ai/platform/data-usage/">Workers AI data usage</a> and <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>, Supabase's <a href="https://supabase.com/privacy">privacy policy</a> and Supabase's <a href="https://supabase.com/legal/dpa">data processing terms</a>.</p>
+<p>Supabase and Anthropic also process operational metadata under their own terms, and may process it outside your country. Anthropic's commercial terms say it doesn't train its models on content sent through its API. See Anthropic's <a href="https://www.anthropic.com/legal/commercial-terms">commercial terms</a> and <a href="https://www.anthropic.com/legal/privacy">privacy policy</a>, Supabase's <a href="https://supabase.com/privacy">privacy policy</a> and Supabase's <a href="https://supabase.com/legal/dpa">data processing terms</a>.</p>
 
 <h2>Purchases</h2>
 <p>Apple processes payments for Risen Premium (weekly, yearly, or Lifetime, which is a one-time purchase). RevenueCat manages access, receipt checks, fraud prevention and purchase reporting using a randomly assigned purchase identifier. It isn't your name or email. Risen never sees your card. Deleting Risen doesn't cancel a subscription; manage it in your iPhone's Settings. See RevenueCat's <a href="https://www.revenuecat.com/privacy">privacy policy</a> and <a href="https://www.revenuecat.com/dpa">data processing terms</a>.</p>
@@ -45,7 +45,7 @@
 <tr><th>Data</th><th>Why</th><th>Where</th></tr>
 <tr><td>Camera frames and photos you pick</td><td>Read the page</td><td>On your phone; never uploaded</td></tr>
 <tr><td>A dithered picture of your page</td><td>That day's page in your Book</td><td>On your phone; off in Settings</td></tr>
-<tr><td>Words read from a page, and the verse</td><td>Online help, if you allow it</td><td>Supabase and Cloudflare</td></tr>
+<tr><td>Words read from a page, and the verse</td><td>Online help, if you allow it</td><td>Supabase and Anthropic</td></tr>
 <tr><td>Alarms, pages, notes, settings</td><td>The app itself</td><td>On your phone; backups may apply</td></tr>
 <tr><td>Device identifier and usage counts</td><td>Limits and access checks</td><td>Supabase, as described above</td></tr>
 <tr><td>Purchase history and Premium status</td><td>Your purchase</td><td>Apple and RevenueCat</td></tr>
