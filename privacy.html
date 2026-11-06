@@ -13,16 +13,16 @@
 <h1>Privacy Policy</h1>
 <p class="updated">Last updated: 8 November 2026</p>
 
-<p>Risen is an alarm that stops when you open your Bible to a random verse, then opens a short prayer or devotional and keeps the morning in your Book. Almost everything Risen knows about you stays on your phone. We don't sell your data, we don't track you across apps, and there's no Risen account.</p>
+<p>Risen is an alarm that stops when you open your Bible to a random verse, then opens a short prayer or devotional and keeps the page in your Book. Almost everything Risen knows about you stays on your phone. We don't sell your data, we don't track you across apps, and there's no Risen account.</p>
 
 <h2>On your phone</h2>
-<p>Your alarms, settings, the mornings in your Book (date, verse, feeling, note), your Bible translation, your look and your onboarding answers are stored on your device. Risen doesn't upload them. Device backups may include them, depending on your Apple settings. Deleting Risen, or using Settings &gt; Delete All Data, removes them from that phone. It doesn't delete backups, Apple or RevenueCat purchase records, or the service records described below.</p>
-<p>Widgets and the Live Activity read a small summary (today's verse, the pages you've kept, your next alarm) that Risen writes to storage shared only with its own widget.</p>
+<p>Your alarms, settings, the pages in your Book (date, verse, feeling, note), your Bible translation, your look and your onboarding answers are stored on your device. Risen doesn't upload them. Device backups may include them, depending on your Apple settings. Deleting Risen, or using Settings &gt; Delete All Data, removes them from that phone. It doesn't delete backups, Apple or RevenueCat purchase records, or the service records described below.</p>
+<p>Widgets and the Live Activity read a small summary (today's verse, how many verses you've read, your next alarm) that Risen writes to storage shared only with its own widget.</p>
 
 <h2>The camera and your page</h2>
-<p>Risen reads text from the camera, or from a photo you pick, using Apple's on-device text recognition. When a page matches your verse, Risen keeps a small dithered picture of that page on your phone for that morning in your Book. It isn't uploaded. Turn it off in Settings &gt; Keep a picture of your page, which also deletes the pictures already kept. A photo you pick stays in your Photos library. Share cards are saved to Photos only when you choose to save one.</p>
+<p>Risen reads text from the camera, or from a photo you pick, using Apple's on-device text recognition. When a page matches your verse, Risen keeps a small dithered picture of that page on your phone for that day's page in your Book. It isn't uploaded. Turn it off in Settings &gt; Keep a picture of your page, which also deletes the pictures already kept. A photo you pick stays in your Photos library. Share cards are saved to Photos only when you choose to save one.</p>
 
-<h2>Online help with hard pages (optional)</h2>
+<h2>Reading hard pages online (optional)</h2>
 <p>Risen first tries to match the page on your phone. The first time that fails outside an alarm, Risen asks whether it may get online help. If you allow it, and the phone can't match a page, Risen sends the words it read on that page (never the photo) and the text of the verse you're looking for, over an encrypted connection, to Risen's service on Supabase. The service sends those two texts to Cloudflare's AI service, which compares their meaning and says whether they match. During an alarm Risen never stops to ask; it moves on to a photo or typing.</p>
 <p>Anything readable in the frame can end up in the words Risen reads, so keep names and private notes out of the picture. To limit use and check access, the service also receives your IP address, a device identifier and your RevenueCat purchase identifier. It sends the purchase identifier to RevenueCat to check Premium. None of these identifiers go to the AI model.</p>
 <p>Free devices get 3 online checks a day; Premium gets 30. The onboarding demo has its own small allowance. You can turn online help off or on in Settings &gt; Read hard pages online. Turning it off stops future requests; it can't recall one already sent. On-device matching, photos and typing always work without it.</p>
@@ -44,9 +44,9 @@
 <div class="wrap"><table>
 <tr><th>Data</th><th>Why</th><th>Where</th></tr>
 <tr><td>Camera frames and photos you pick</td><td>Read the page</td><td>On your phone; never uploaded</td></tr>
-<tr><td>A dithered picture of your page</td><td>That morning in your Book</td><td>On your phone; off in Settings</td></tr>
+<tr><td>A dithered picture of your page</td><td>That day's page in your Book</td><td>On your phone; off in Settings</td></tr>
 <tr><td>Words read from a page, and the verse</td><td>Online help, if you allow it</td><td>Supabase and Cloudflare</td></tr>
-<tr><td>Alarms, mornings, notes, settings</td><td>The app itself</td><td>On your phone; backups may apply</td></tr>
+<tr><td>Alarms, pages, notes, settings</td><td>The app itself</td><td>On your phone; backups may apply</td></tr>
 <tr><td>Device identifier and usage counts</td><td>Limits and access checks</td><td>Supabase, as described above</td></tr>
 <tr><td>Purchase history and Premium status</td><td>Your purchase</td><td>Apple and RevenueCat</td></tr>
 </table></div>
