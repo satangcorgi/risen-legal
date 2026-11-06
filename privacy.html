@@ -3,65 +3,64 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Risen — Privacy Policy</title>
+<title>Risen Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Risen — Privacy Policy</h1>
-<p class="updated">Last updated: 27 September 2026</p>
+<a class="home" href="https://satangcorgi.github.io/risen-site/">Risen</a>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 8 November 2026</p>
 
-<p>Risen is a Christian alarm app that helps you engage with a Bible verse when completing an alarm challenge. Most of your app data stays in local storage on your device. <strong>We do not sell your personal data.</strong> We use the services described below to manage subscriptions and, if you choose, help check scanned verse text.</p>
+<p>Risen is an alarm that stops when you open your Bible to a random verse, then opens a short prayer or devotional and keeps the morning in your Book. Almost everything Risen knows about you stays on your phone. We don't sell your data, we don't track you across apps, and there's no Risen account.</p>
 
-<h2>No accounts</h2>
-<p>You do not need a Risen account. Risen does not ask you to send your name, email address, phone number or location to use its identification service. Device and purchase-service identifiers are described below. If you contact support, we receive the information you choose to send us.</p>
+<h2>On your phone</h2>
+<p>Your alarms, settings, the mornings in your Book (date, verse, feeling, note), your Bible translation, your look and your onboarding answers are stored on your device. Risen doesn't upload them. Device backups may include them, depending on your Apple settings. Deleting Risen, or using Settings &gt; Delete All Data, removes them from that phone. It doesn't delete backups, Apple or RevenueCat purchase records, or the service records described below.</p>
+<p>Widgets and the Live Activity read a small summary (today's verse, the pages you've kept, your next alarm) that Risen writes to storage shared only with its own widget.</p>
 
-<h2>Local app data</h2>
-<p>Risen stores your alarms, settings, streaks, reading history, reflections, journal entries, onboarding answers and Bible-version preference locally. Risen does not upload these records to its identification service. If you choose a profile photo, Risen saves the cropped image locally on your device. It is not sent to the verse-identification service. Your device or computer backups may include app data according to your Apple settings. Deleting Risen removes its local data from that installation; it does not delete existing backups, Apple or RevenueCat purchase records, or the service records described below.</p>
+<h2>The camera and your page</h2>
+<p>Risen reads text from the camera, or from a photo you pick, using Apple's on-device text recognition. When a page matches your verse, Risen keeps a small dithered picture of that page on your phone for that morning in your Book. It isn't uploaded. Turn it off in Settings &gt; Keep a picture of your page, which also deletes the pictures already kept. A photo you pick stays in your Photos library. Share cards are saved to Photos only when you choose to save one.</p>
 
-<h2>Camera and selected photos</h2>
-<p>Risen reads text from camera frames or a photo you choose using Apple's on-device recognition. <strong>Risen does not upload images or save a photo archive.</strong> A picture you select remains in your Photos library unless you delete it there.</p>
+<h2>Online help with hard pages (optional)</h2>
+<p>Risen first tries to match the page on your phone. The first time that fails outside an alarm, Risen asks whether it may get online help. If you allow it, and the phone can't match a page, Risen sends the words it read on that page (never the photo) and the text of the verse you're looking for, over an encrypted connection, to Risen's service on Supabase. The service sends those two texts to Cloudflare's AI service, which compares their meaning and says whether they match. During an alarm Risen never stops to ask; it moves on to a photo or typing.</p>
+<p>Anything readable in the frame can end up in the words Risen reads, so keep names and private notes out of the picture. To limit use and check access, the service also receives your IP address, a device identifier and your RevenueCat purchase identifier. It sends the purchase identifier to RevenueCat to check Premium. None of these identifiers go to the AI model.</p>
+<p>Free devices get 3 online checks a day; Premium gets 30. The onboarding demo has its own small allowance. You can turn online help off or on in Settings &gt; Online help with hard pages. Turning it off stops future requests; it can't recall one already sent. On-device matching, photos and typing always work without it.</p>
 
-<h2>Optional cloud verse checking</h2>
-<p>Risen first tries to match the passage on your device. If you allow cloud identification and local matching needs help, extracted text, the requested Bible reference and its verse text are sent over an encrypted connection to Risen's Supabase service. The service sends the scanned text and the requested passage's verse text to <strong>Cloudflare Workers AI</strong> to compare their meaning. The requested Bible reference label is not sent as a separate model field, although a reference visible in scanned text may be included. Your image, journal and onboarding profile are not sent to the model.</p>
-<p>Anything readable in the frame may enter the extracted text, so keep names, private notes and other personal information out of the image. The requested passage comes from Risen's Bible text; it is not your reading history or a profile of your beliefs.</p>
-<p>Our service also receives your request IP, device identifier and RevenueCat purchase-service identifier to check access and limit use. It sends the RevenueCat identifier to RevenueCat to check subscription status. <strong>These identifiers are not included in the AI model request.</strong></p>
-<p>You can decline cloud identification and continue using on-device matching and the available typing fallback. Change this choice in <strong>Me → Verse scanning</strong>. Turning it off prevents future cloud identification requests; it cannot recall a request already sent or automatically erase service records.</p>
+<h2>What the service keeps</h2>
+<p>The service doesn't store the text it reads, the verse, or the result in its database or logs. It keeps usage counts under keyed, pseudonymous identifiers, so it can count repeated use without storing the original identifiers.</p>
+<div class="wrap"><table>
+<tr><th>Record</th><th>How long</th></tr>
+<tr><td>Hourly, daily and monthly usage counts</td><td>Until the end of their time window (UTC). Hourly cleanup usually removes them within 25 hours after that.</td></tr>
+<tr><td>Lifetime count from an earlier version of Risen (only devices that used it)</td><td>Kept without a set expiry. The current version doesn't use it.</td></tr>
+<tr><td>Premium check</td><td>Held in server memory for 60 seconds under a pseudonymous identifier.</td></tr>
+</table></div>
+<p>Supabase and Cloudflare also process operational metadata under their own terms, and may process it outside your country. Cloudflare states that Workers AI content isn't used to train models without consent, and Risen doesn't give that consent. See Cloudflare's <a href="https://developers.cloudflare.com/workers-ai/platform/data-usage/">Workers AI data usage</a> and <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>, Supabase's <a href="https://supabase.com/privacy">privacy policy</a> and Supabase's <a href="https://supabase.com/legal/dpa">data processing terms</a>.</p>
 
-<h2>Service records and retention</h2>
-<p>Risen's identification function does not store scanned text, requested passages or comparison results in its database or application logs. It stores usage counts under keyed, pseudonymous device/IP identifiers. These identifiers allow the service to recognize repeated use without storing the original identifiers in new usage records.</p>
-<table>
-<tr><th>Record</th><th>Retention</th></tr>
-<tr><td>Hourly, daily and monthly usage counters</td><td>Expire at the end of their UTC time window; hourly cleanup normally removes them within 25 hours after expiry.</td></tr>
-<tr><td>Device's lifetime free-identification count</td><td>Retained without a scheduled expiry so the same allowance is not repeatedly renewed.</td></tr>
-<tr><td>Subscription-check cache</td><td>Held briefly in server memory under a pseudonymous identifier. Decisions are valid for 60 seconds; entries are removed during later refresh, eviction or process shutdown.</td></tr>
-</table>
-<p>Apple retains payment records under its applicable terms. RevenueCat processes subscription records for Risen to maintain access and purchase reporting. Deleting Risen does not delete these records or cancel your Apple subscription. Contact us about service-data requests; we may need the purchase-service identifier to locate your records. Supabase and Cloudflare also process operational metadata; Risen's quota cleanup does not control those provider records. These providers operate internationally, so service data may be processed outside your country.</p>
-<p>Cloudflare states that Workers AI content is not used for model training without consent. Risen does not enable model training with your text. <strong>We do not claim that all provider data is deleted immediately.</strong> See <a href="https://developers.cloudflare.com/workers-ai/platform/data-usage/">Cloudflare's data-use explanation</a>, <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy policy</a>, <a href="https://supabase.com/privacy">Supabase's privacy policy</a> and <a href="https://supabase.com/legal/customer-resources/data-processing-addendum">Supabase's data-processing terms</a>.</p>
+<h2>Purchases</h2>
+<p>Apple processes payments for Risen Premium (weekly, yearly, or Lifetime, which is a one-time purchase). RevenueCat manages access, receipt checks, fraud prevention and purchase reporting using a randomly assigned purchase identifier. It isn't your name or email. Risen never sees your card. Deleting Risen doesn't cancel a subscription; manage it in your iPhone's Settings. See RevenueCat's <a href="https://www.revenuecat.com/privacy">privacy policy</a> and <a href="https://www.revenuecat.com/dpa">data processing terms</a>.</p>
 
-<h2>Subscriptions</h2>
-<p>Apple processes payments. RevenueCat manages subscription access, receipt validation, fraud prevention and purchase analytics using a randomly assigned purchase-service identifier. This identifier can link subscription records across uses of Risen; it is not your name or email address. If you use online verse checking, Risen's service also uses it to check subscription access. Risen does not receive your payment card details. See <a href="https://www.revenuecat.com/dpa">RevenueCat's data-processing terms</a> and <a href="https://www.revenuecat.com/privacy">privacy policy</a>.</p>
+<h2>In short</h2>
+<div class="wrap"><table>
+<tr><th>Data</th><th>Why</th><th>Where</th></tr>
+<tr><td>Camera frames and photos you pick</td><td>Read the page</td><td>On your phone; never uploaded</td></tr>
+<tr><td>A dithered picture of your page</td><td>That morning in your Book</td><td>On your phone; off in Settings</td></tr>
+<tr><td>Words read from a page, and the verse</td><td>Online help, if you allow it</td><td>Supabase and Cloudflare</td></tr>
+<tr><td>Alarms, mornings, notes, settings</td><td>The app itself</td><td>On your phone; backups may apply</td></tr>
+<tr><td>Device identifier and usage counts</td><td>Limits and access checks</td><td>Supabase, as described above</td></tr>
+<tr><td>Purchase history and Premium status</td><td>Your purchase</td><td>Apple and RevenueCat</td></tr>
+</table></div>
 
-<h2>Summary table</h2>
-<table>
-<tr><th>Data</th><th>Risen's use</th><th>Where processed</th></tr>
-<tr><td>Camera or selected images</td><td>Read text</td><td>On your device; no image upload</td></tr>
-<tr><td>Profile photo</td><td>Display the cropped photo you choose</td><td>Local app storage; no image upload</td></tr>
-<tr><td>Scanned text and requested passage</td><td>Optional cloud comparison</td><td>Supabase / Cloudflare Workers AI, after consent</td></tr>
-<tr><td>Alarms, streaks, journal, onboarding answers</td><td>Personal app experience</td><td>Local app storage; device backups may apply</td></tr>
-<tr><td>Usage identifiers and counts</td><td>Access checks and limits</td><td>Supabase; retention described above</td></tr>
-<tr><td>Purchase history and subscription status</td><td>Subscription management and purchase analytics</td><td>Apple / RevenueCat</td></tr>
-</table>
-
-<h2>Young users and privacy choices</h2>
-<p>Cloud identification is optional and sends text outside the device. Users who need a parent or guardian's consent should obtain it before enabling this option; otherwise they can use on-device matching. Avoid scanning personal information. A parent or guardian can contact us about privacy concerns or service-data requests.</p>
+<h2>Young users</h2>
+<p>Online help is optional and sends text off the phone. Anyone who needs a parent's consent should ask before turning it on; Risen works without it. A parent or guardian can contact us about privacy questions or service data.</p>
 
 <h2>Your choices</h2>
-<p>You can change cloud identification in Me and manage camera access in device Settings. Contact us for questions or requests about service data. We may need enough information to locate the relevant pseudonymous records. Some records may need to be kept for legal obligations or to prevent abuse; we will explain what applies to a request.</p>
+<p>Turn online help and page pictures on or off in Settings. Manage camera access in your iPhone's Settings. Write to us for questions or requests about service data; we may need your purchase identifier to find pseudonymous records. Some records may be kept to meet legal duties or prevent abuse, and we'll tell you what applies.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes, the updated version will be posted at this address with a new date.</p>
+<p>If this policy changes, the new version will be posted here with a new date.</p>
 
 <h2>Contact</h2>
-<p>Questions? Email <a href="mailto:satangscorgi@gmail.com">satangscorgi@gmail.com</a>.</p>
+<p>Email <a href="mailto:satangscorgi@gmail.com">satangscorgi@gmail.com</a>.</p>
 </body>
 </html>
